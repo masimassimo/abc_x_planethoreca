@@ -2,16 +2,16 @@
 {
     'name': "abc_x_planethoreca",
 
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+    'summary': """Modulo che contiene le modifiche apportate su Planet Horeca, relativo a Fatturapertutti, template DDT, 
+    Preventivo/Ordine di vendita, Fattura, Point of Sale""",
 
     'description': """
-        Long description of module's purpose
+        Modulo che contiene le modifiche apportate su Planet Horeca, relativo a Fatturapertutti, template DDT, 
+    Preventivo/Ordine di vendita, Fattura, Point of Sale
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "A.B.C. srl",
+    'website': "https://www.abcstrategie.it/",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
