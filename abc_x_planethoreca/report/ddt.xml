@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <template id="report_ddt_inherit_abc" inherit_id="l10n_it_delivery_note.delivery_note_report_template">
+             <xpath expr="//div[@id='dn_terms']" position="after">
+                 <strong> Nominativo di riferimento: </strong>
+                 <span t-field="doc.sale_ids[0].nominativo_di_riferimento"/>
+                 <br/>
+                 <strong> Modalità di consegna: </strong>
+                 <span t-field="doc.modalità_di_consegna"/>
+                 <br/>
+                 <strong> Documento di origine: </strong>
+                 <span t-field="doc.documento_di_origine"/>
+                 <br/>
+                 <strong> Riferimento ordine di produzione (Matricola): </strong>
+                 <span t-field="doc.riferimento_ordine_produzione"/>
+             </xpath>
+        </template>
+    </data>   
+</odoo>
