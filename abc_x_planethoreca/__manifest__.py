@@ -2,12 +2,11 @@
 {
     'name': "abc_x_planethoreca",
 
-    'summary': """Modulo che contiene le modifiche apportate su Planet Horeca, relativo a Fatturapertutti, template DDT, 
-    Preventivo/Ordine di vendita, Fattura, Point of Sale""",
+    'summary': """
+        Modifiche per PlanetHoreca (Preventivo/Ordine di vendita, Campo Checkbok in Pos_Configuration)""",
 
     'description': """
-        Modulo che contiene le modifiche apportate su Planet Horeca, relativo a Fatturapertutti, template DDT, 
-    Preventivo/Ordine di vendita, Fattura, Point of Sale
+        Modifiche per PlanetHoreca (Preventivo/Ordine di vendita, Campo Checkbok in Pos_Configuration)
     """,
 
     'author': "A.B.C. srl",
@@ -20,14 +19,14 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale', 'sale_management', 'pos_sale', 'sale_enterprise', 'sale_margin', 'sale_stock'],
+    'depends': ['base', 'sale', 'sale_management', 'pos_sale', 'sale_enterprise', 'sale_margin', 'sale_stock', 'point_of_sale'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
-        'views/templates.xml',
         'report/preventivo_ordineVendita.xml',
+        'report/ddt.xml',
     ],
     # only loaded in demonstration mode
     'demo': [],

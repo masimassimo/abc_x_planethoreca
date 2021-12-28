@@ -1,60 +1,76 @@
 <odoo>
   <data>
-    <!-- explicit list view definition -->
-<!--
-    <record model="ir.ui.view" id="abc_x_planethoreca.list">
-      <field name="name">abc_x_planethoreca list</field>
-      <field name="model">abc_x_planethoreca.abc_x_planethoreca</field>
+      <record model="ir.ui.view" id="project_task_inherit">
+      <field name="name">pos_config_inherit</field>
+      <field name="model">pos.config</field>
+      <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
       <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
+          
+        <xpath expr="//h2[@name='order']" position="before">
+        <h2>Fatturapertutti</h2>
+        <div class="row mt16 o_settings_container">
+            <div class="col-12 col-lg-6 o_setting_box">
+                <div class="o_setting_left_pane">
+                    <field name="fattura_per_tutti" attrs="{'readonly': [('has_active_session','=', True)]}"/>
+                </div>
+                <div class="o_setting_right_pane">
+                    <label for="fattura_per_tutti"/>
+                        <div class="text-muted">
+                            Abilitare solo se si tratta di una cassa Fatturapertutti
+                        </div>
+                               
+                </div>
+            </div>
+        </div>
+   
+        </xpath>
+      </field>
+      </record>
+      
+    <record model="ir.ui.view" id="res_partner_inherit">
+      <field name="name">res_partner_inherit</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+          
+        <xpath expr="//field[@name='function'][1]" position="after">
+    
+                    <field name="fax"/>
+       
+   
+        </xpath>
+      </field>
+      </record>
+      
+      <record model="ir.ui.view" id="res_partner_inherit_1">
+      <field name="name">res_partner_inherit</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+          
+        <xpath expr="//field[@name='email'][1]" position="replace">
+                <field name="email" widget="email" context="{'gravatar_image': True}" required='1'/>   
+        </xpath>
+      </field>
+      </record>
+      
+      
+      
+      
+      <record model="ir.ui.view" id="sale_order_inherit_nominativo_di_riferimento">
+      <field name="name">sale_order_inherit_nominativo_di_riferimento</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='partner_shipping_id']" position="after">
+          <field name="nominativo_di_riferimento"  options="{&quot;always_reload&quot;: True}"/>
+        </xpath>
       </field>
     </record>
--->
 
-    <!-- actions opening views on models -->
-<!--
-    <record model="ir.actions.act_window" id="abc_x_planethoreca.action_window">
-      <field name="name">abc_x_planethoreca window</field>
-      <field name="res_model">abc_x_planethoreca.abc_x_planethoreca</field>
-      <field name="view_mode">tree,form</field>
-    </record>
--->
-
-    <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="abc_x_planethoreca.action_server">
-      <field name="name">abc_x_planethoreca server</field>
-      <field name="model_id" ref="model_abc_x_planethoreca_abc_x_planethoreca"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": model._name,
-        }
-      </field>
-    </record>
--->
-
-    <!-- Top menu item -->
-<!--
-    <menuitem name="abc_x_planethoreca" id="abc_x_planethoreca.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="abc_x_planethoreca.menu_1" parent="abc_x_planethoreca.menu_root"/>
-    <menuitem name="Menu 2" id="abc_x_planethoreca.menu_2" parent="abc_x_planethoreca.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="abc_x_planethoreca.menu_1_list" parent="abc_x_planethoreca.menu_1"
-              action="abc_x_planethoreca.action_window"/>
-    <menuitem name="Server to list" id="abc_x_planethoreca" parent="abc_x_planethoreca.menu_2"
-              action="abc_x_planethoreca.action_server"/>
--->
+      
+      
+      	
+      
   </data>
 </odoo>

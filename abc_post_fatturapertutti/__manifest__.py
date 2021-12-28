@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "abc_x_planethoreca",
+    'name': "abc_post_fatturapertutti",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -20,15 +20,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale', 'sale_management', 'pos_sale', 'sale_enterprise', 'sale_margin', 'sale_stock'],
+    'depends': ['point_of_sale', 'pos_enterprise', 'pos_epson_printer', 'pos_hr', 'pos_loyalty', 'pos_sale'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'report/preventivo_ordineVendita.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [],
+    'demo': [
+        'demo/demo.xml',
+    ],
 }
