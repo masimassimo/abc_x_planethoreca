@@ -1,20 +1,27 @@
 # -*- coding: utf-8 -*-
-
 {
-    'name': 'Pos Text Receipt',
-    'version': '1.0',
-    'category': 'Point of Sale',
-    'sequence': 6,
-    'author': 'Webveer',
-    'summary': 'Allows you to download receipt in text format.',
+    'name': "abc_pos_text",
+
+    'summary': """
+        Modulo che permette di stampare lo scontrino in TXT dopo averlo validato alla cassa.""",
+
     'description': """
+        Modulo che permette di stampare lo scontrino in TXT dopo averlo validato alla cassa.
+    """,
 
-=======================
+    'author': "A.B.C Srl",
+    'website': "https://www.abcstrategie.it/",
 
-Allows you to download receipt in text format.
+    # Categories can be used to filter modules in modules listing
+    # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
+    # for the full list
+    'category': 'Point of Sale',
+    'version': '0.1',
 
-""",
+    # any module necessary for this one to work correctly
     'depends': ['point_of_sale'],
+
+    # always loaded
     'data': [
         'views/views.xml',
         'views/templates.xml'
@@ -26,8 +33,5 @@ Allows you to download receipt in text format.
         'static/description/download.jpg',
     ],
     'installable': True,
-    'website': '',
     'auto_install': False,
-    'price': 20,
-    'currency': 'EUR',
 }
