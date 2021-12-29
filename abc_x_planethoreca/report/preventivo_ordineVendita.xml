@@ -1,0 +1,246 @@
+<odoo>
+    <data>
+        <template id="report_preventivo_ordineVendita_1_inherit_abc" inherit_id="sale.report_saleorder_document">
+             <xpath expr="//div[@class='page']" position="before">
+                 <br/>
+                <table class="table table-sm o_main_table">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_testo" class="text-left"  style="font-size:12px"> "Assolve gli obblighi di cui all’art. 62 comma 1 del DL 24 gennaio 2012 n. 1 convertito, con modificazioni dalla legge 24 marzo 2012 N. 27”. </th>
+                        </tr>
+                    </thead>
+
+                </table>
+                 
+                 <table class= "table table-sm o_main_table">
+                     <thead style="display: table-row-group">
+                         <tr>
+                             <th name="th_cod_cli_arca" class="text-left" style="font-size:12px"> COD. CLI. Arca </th>
+                             <th name="th_cod_cli_odoo" class="text-left" style="font-size:12px"> COD. CLI. Odoo </th>
+                             <th name="th_codice_fiscale" class="text-left" style="font-size:12px"> Codice Fiscale </th>
+                             <th name="th_telefono" class="text-left" style="font-size:12px"> Telefono </th>
+                             <th name="th_fax" class="text-left" style="font-size:12px"> FAX </th>
+                         </tr>
+                     </thead>
+                     <tbody class="sale_tbody">
+                         <tr t-att-class="'bg-200 o_line_section'">
+                             <td name="td_cod_cli_arca" class ="text-left" style="font-size:12px">
+                                <span t-field="doc.partner_id.x_studio_char_field_GWL1b"/>
+                             </td>
+                             <td name="td_cod_cli_odoo" class ="text-left" style="font-size:12px">
+                                <span t-field="doc.partner_id.id"/>
+                             </td>    
+     
+                             <td name="td_codice_fiscale" class ="text-left">
+                                 
+                                 <span t-field="doc.partner_id.fiscalcode" style="font-size:12px"/>
+                             </td>   
+                             <td name="td_telefono" class ="text-left">
+                                 
+                                 <span t-field="doc.partner_id.phone" style="font-size:12px"/>
+                             </td>  
+                             <td name="td_fax" class ="text-left">
+                                 <span t-field="doc.partner_id.fax" style="font-size:12px"/>
+                             </td>              
+
+                         </tr>
+                     </tbody>
+                 </table>
+                 
+                 
+                <table class="table table-sm o_main_table">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_condizioni_di_pagamento" class="text-left" style="font-size:12px"> Termini di pagamento </th>
+                            <th name="th_persona_da_contattare" class="text-left" style="font-size:12px"> Persona da contattare </th>
+                            <th name="th_riferimento_vs_documenti" class="text-left" style="font-size:12px"> Riferimenti vs. Documenti </th>
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+                        <tr t-att-class="'bg-200 o_line_section'">
+                            <td name="td_condizioni_di_pagamento" class="text-left"> 
+                                
+                                <span t-field="doc.payment_term_id" style="font-size:12px"/> 
+                            </td>
+                            <td name="td_persona_da_contattare" class="text-left">
+    
+                                <!-- <span t-field="doc.persona_da_contattare"/> -->
+                            </td>
+                            <td name="td_riferimento_vs_documenti" class="text-left">
+                                <span> D20211109PM del 10-11-21 </span>
+                                <!-- <span t-field="doc.riferimento_vs_documenti"/> -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                 
+                 
+                <table class="table table-sm o_main_table">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_banca_di_appoggio" class="text-left"> Banca di appoggio </th>
+                            <th name="th_data_prevista_di_consegna" class="text-left"> Data prevista di consegna (Se non specificata in riga) </th>
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+                        <tr t-att-class="'bg-200 o_line_section'">
+                            <td name="td_banca_di_appoggio" class="text-left"  t-if="doc.partner_id.bank_ids"> 
+                               <span t-field="doc.partner_id.bank_ids[0].acc_number"/>
+                            </td>
+                            <td name="td_data_prevista_di_consegna" class="text-left">
+                                
+                                <span t-field="doc.commitment_date"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                 
+                 
+                             
+                                                    
+                 <br/>
+
+                 
+             </xpath>
+        </template>
+        
+        <template id="report_preventivo_ordineVendita_2_inherit_abc" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//th[@name='th_description']" position="before">
+                <th name="th_codice_articolo" class="text-left"> Codice Articolo </th>       
+            </xpath>
+        </template>
+                
+        <template id="report_preventivo_ordineVendita_3_inherit_abc" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//td[@name='td_name']" position="before">
+                 <td name="td_codice_articolo"> 
+                     <span t-field="line.product_template_id.id"/>
+                     <br/>
+                     <img t-att-src="'data:image/png;base64,%s' % to_text(line.product_id.image_1920)"/>
+                </td>    
+            </xpath>
+        </template>
+        
+        
+        <template id="report_preventivo_ordineVendita_4_inherit_abc" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//div[@class='page']" position="after">
+                <br/>
+                <table class="table table-sm o_main_table">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_porto" class="text-left"> Porto </th>
+                            <th name="th_trasporto_a_cura_del" class="text-left"> Trasporto a cura del </th>
+                            <th name="th_descrizione_vettore" class="text-left"> Descrizione Vettore </th>
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+                        <tr t-att-class="'bg-200 o_line_section'">
+                            <td name="td_porto" class="text-left"> 
+                                <span> Porto Example </span>
+                                <!-- <span t-field="doc.porto"/> -->   
+                            </td>
+                            <td name="td_trasporto_a_cura_del" class="text-left">
+                                <span> Trasportatore Example </span>
+                                <!-- <span t-field="doc.persona_da_contattare"/> -->
+                            </td>
+                            <td name="td_descrizione_vettore" class="text-left">
+                                <span> Vettore Example </span>
+                                <!-- <span t-field="doc.descrizione_vettore"/> -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-- Seconda parte -->
+                
+                <table class="table table-sm o_main_table">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_totale_merce" class="text-left"> Totale merce </th>
+                            <th name="th_sconto_merce" class="text-left"> Sconto % merce </th>
+                            <th name="th_importo_sconto" class="text-left"> Importo sconto </th>
+                            <th name="th_acconto" class="text-left"> Acconto </th>
+                            <th name="th_spese_trasporto" class="text-left"> Spese trasporto </th>
+                            <th name="th_spese_imballo" class="text-left"> Spese imballo </th>
+                            <th name="th_spese_varie" class="text-left"> Spese varie </th>
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+                        <tr t-att-class="'bg-200 o_line_section'">
+                            <td name="td_totale_merce" class="text-left"> 
+                                <span> 100 </span>
+                                <!-- <span t-field="doc.totale_merce"/> -->   
+                            </td>
+                            <td name="td_sconto_merce" class="text-left">
+                                <span> 10% </span>
+                                <!-- <span t-field="doc.sconto_merce"/> -->
+                            </td>
+                            <td name="td_importo_sconto" class="text-left">
+                                <span> 10 </span>
+                                <!-- <span t-field="doc.importo_sconto"/> -->
+                            </td>
+                            <td name="td_acconto" class="text-left">
+                                <span> 50 </span>
+                                <!-- <span t-field="doc.acconto"/> -->
+                            </td>
+                              <td name="td_spese_trasporto" class="text-left">
+                                <span> 20 </span>
+                                <!-- <span t-field="doc.spese_trasporto"/> -->
+                            </td>
+                              <td name="td_spese_imballo" class="text-left">
+                                <span> 50 </span>
+                                <!-- <span t-field="doc.spese_imballo"/> -->
+                            </td>
+                              <td name="td_spese_varie" class="text-left">
+                                <span> 50 </span>
+                                <!-- <span t-field="doc.spese_varie"/> -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-- Terza parte -->
+                 <table class="table table-sm o_main_table">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_annotazioni" class="text-left"> Annotazioni </th>
+                            <th name="th_timbro_e_firma" class="text-right"> Timbro e firma per accettazione </th>
+                        </tr>
+                    </thead>
+                     
+                      <tbody class="sale_tbody">
+                        <tr t-att-class="'bg-200 o_line_section'">
+                            <td name="td_annotazioni" class="text-left"> 
+                                <span> TEST Annotazioni </span>
+                                <!-- <span t-field="doc.annotazioni"/> -->   
+                            </td>
+                            <td name="td_timbro_e_firma" class="text-left">
+                                
+                                <!-- <span t-field="doc.sconto_merce"/> -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                
+                
+            </xpath>
+        </template>
+        
+        
+        
+        
+    </data>   
+</odoo>
+
+
+
+
+
+
+
+
+
+
+
+
+           

@@ -1,0 +1,133 @@
+<odoo>
+    <data>
+        <template id="report_ddt_inherit_abc_1" inherit_id="l10n_it_delivery_note.delivery_note_report_template">
+             <xpath expr="//div[@class='page']" position="before">
+                <br/>
+                    <table class="table table-sm o_main_table">
+                        <thead style="display: table-row-group">
+                            <tr>
+                                <th name="th_testo" class="text-left"> "Assolve gli obblighi di cui all’art. 62 comma 1 del DL 24 gennaio 2012 n. 1 convertito, con modificazioni dalla legge 24 marzo 2012 N. 27”. </th>
+                                <th name="th_cod_lista" class="text-left">COD. LISTA</th>
+                                <th name="th_fattura_accompagnatoria" class="text-left">Fattura Accompagnatoria</th>
+                            </tr>
+                        </thead>
+                        <tbody class="sale_tbody">
+                            <tr>
+                               <td name="td_testo" class="text-left"> 
+                             </td>
+                        
+                            <td name="td_cod_lista" class="text-right">
+                                <span> D20211109PM </span>
+                                <!-- <span t-field="doc.cod_lista"/> -->
+                            </td>
+                            <!--
+                            <td name="td_fattura_accompagnatoria" class="text-right">
+                                <span></span>
+                            </td>
+                            -->
+                        </tr>
+                    </tbody>
+                </table>
+                 
+                <table class= "table table-sm o_main_table">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_cod_cli" class="text-left"> COD. CLI. </th>
+                            <th name="th_partita_iva" class="text-left"> Partita IVA </th>
+                            <th name="th_codice_fiscale" class="text-left"> Codice Fiscale </th>
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+                        <tr t-att-class="'bg-200 o_line_section'">
+                            <td name="td_cod_cli" class ="text-left">
+                                <span> 005320 </span>
+                                 <!-- <span t-field="doc.cod_cli/> -->
+                            </td>                            
+                            <td name="td_partita_iva" class ="text-left">
+                                 <!-- <span> IT02562770813 </span> -->
+                                <span t-field="doc.partner_id.vat"/>
+                            </td>       
+                            <td name="td_codice_fiscale" class ="text-left">
+                                 
+                                <span t-field="doc.partner_id.fiscalcode"/>
+                            </td>   
+                        </tr>
+                    </tbody>
+                </table>
+                 
+                 
+                <table class= "table table-sm o_main_table">
+                    <thead style="display: table-row-group">
+                        <tr>
+                            <th name="th_telefono" class="text-left"> Telefono </th>
+                            <th name="th_fax" class="text-left"> FAX </th>
+                            <th name="th_banca_di_appoggio" class="text-left"> Banca di appoggio </th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody class="sale_tbody">
+                        <tr t-att-class="'bg-200 o_line_section'">
+                            <td name="td_telefono" class ="text-left">
+                                 <span t-field="doc.partner_id.phone"/>
+                             </td>
+                            
+                             <td name="td_fax" class ="text-left">
+                                 <span t-field="doc.partner_id.fax"/>
+                             </td>
+                            
+                            <td name="td_banca_di_appoggio" class="text-left"  t-if="doc.partner_id.bank_ids"> 
+                               <span t-field="doc.partner_id.bank_ids[0].acc_number"/>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+                 </xpath>
+                 </template>
+        
+        
+                            
+                        
+    
+        
+        
+        
+        
+        
+                
+        <template id="report_ddt_inherit_abc_23" inherit_id="l10n_it_delivery_note.delivery_note_report_template">
+             <xpath expr="//table[@id='product_data']/thead" position="inside">
+                 
+                 <span> PROVAAAAAAA </span>
+             </xpath>
+                     
+        </template>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <template id="report_ddt_inherit_abc_3" inherit_id="l10n_it_delivery_note.delivery_note_report_template">
+             <xpath expr="//t[@t-if='not line.display_type']/td[1]" position="before">
+                 
+                    <td name="td_codice_articolo"> 
+                    <span t-field="line.product_id.id"/>
+                        <span> provaA </span>
+                     <br/>
+                 </td>
+             </xpath>
+                     
+        </template>
+    </data>   
+</odoo>
