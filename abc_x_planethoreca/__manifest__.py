@@ -25,8 +25,6 @@
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
-        'report/preventivo_ordineVendita.xml',
-        'report/ddt.xml',
     ],
     # only loaded in demonstration mode
     'demo': [],
