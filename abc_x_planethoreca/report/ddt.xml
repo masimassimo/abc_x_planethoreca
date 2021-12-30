@@ -19,13 +19,10 @@
                         
                             <td name="td_cod_lista" class="text-right">
                                 <span> D20211109PM </span>
-                                <!-- <span t-field="doc.cod_lista"/> -->
+                           
+                            
                             </td>
-                            <!--
-                            <td name="td_fattura_accompagnatoria" class="text-right">
-                                <span></span>
-                            </td>
-                            -->
+                          
                         </tr>
                     </tbody>
                 </table>
@@ -42,10 +39,10 @@
                         <tr t-att-class="'bg-200 o_line_section'">
                             <td name="td_cod_cli" class ="text-left">
                                 <span> 005320 </span>
-                                 <!-- <span t-field="doc.cod_cli/> -->
+                                
                             </td>                            
                             <td name="td_partita_iva" class ="text-left">
-                                 <!-- <span> IT02562770813 </span> -->
+                                 
                                 <span t-field="doc.partner_id.vat"/>
                             </td>       
                             <td name="td_codice_fiscale" class ="text-left">
