@@ -2,10 +2,6 @@
 
 from odoo import models, fields, api
 
-
-_logger = logging.getLogger(__name__)
-
-
 class abc_x_planethoreca(models.Model):
      _name = 'abc_x_planethoreca.abc_x_planethoreca'
      _description = 'abc_x_planethoreca.abc_x_planethoreca'
