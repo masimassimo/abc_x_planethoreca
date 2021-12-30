@@ -1,5 +1,6 @@
 <odoo>
     <data>
+        <!--
         <template id="report_preventivo_ordineVendita_1_inherit_abc" inherit_id="sale.report_saleorder_document">
              <xpath expr="//div[@class='page']" position="before">
                  <br/>
@@ -64,11 +65,11 @@
                             </td>
                             <td name="td_persona_da_contattare" class="text-left">
     
-                                <!-- <span t-field="doc.persona_da_contattare"/> -->
+                                
                             </td>
                             <td name="td_riferimento_vs_documenti" class="text-left">
                                 <span> D20211109PM del 10-11-21 </span>
-                                <!-- <span t-field="doc.riferimento_vs_documenti"/> -->
+                               
                             </td>
                         </tr>
                     </tbody>
@@ -136,21 +137,21 @@
                         <tr t-att-class="'bg-200 o_line_section'">
                             <td name="td_porto" class="text-left"> 
                                 <span> Porto Example </span>
-                                <!-- <span t-field="doc.porto"/> -->   
+                                 
                             </td>
                             <td name="td_trasporto_a_cura_del" class="text-left">
                                 <span> Trasportatore Example </span>
-                                <!-- <span t-field="doc.persona_da_contattare"/> -->
+                              
                             </td>
                             <td name="td_descrizione_vettore" class="text-left">
                                 <span> Vettore Example </span>
-                                <!-- <span t-field="doc.descrizione_vettore"/> -->
+                          
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 
-                <!-- Seconda parte -->
+               
                 
                 <table class="table table-sm o_main_table">
                     <thead style="display: table-row-group">
@@ -168,37 +169,37 @@
                         <tr t-att-class="'bg-200 o_line_section'">
                             <td name="td_totale_merce" class="text-left"> 
                                 <span> 100 </span>
-                                <!-- <span t-field="doc.totale_merce"/> -->   
+                                 
                             </td>
                             <td name="td_sconto_merce" class="text-left">
                                 <span> 10% </span>
-                                <!-- <span t-field="doc.sconto_merce"/> -->
+                              
                             </td>
                             <td name="td_importo_sconto" class="text-left">
                                 <span> 10 </span>
-                                <!-- <span t-field="doc.importo_sconto"/> -->
+                            
                             </td>
                             <td name="td_acconto" class="text-left">
                                 <span> 50 </span>
-                                <!-- <span t-field="doc.acconto"/> -->
+                              
                             </td>
                               <td name="td_spese_trasporto" class="text-left">
                                 <span> 20 </span>
-                                <!-- <span t-field="doc.spese_trasporto"/> -->
+                                
                             </td>
                               <td name="td_spese_imballo" class="text-left">
                                 <span> 50 </span>
-                                <!-- <span t-field="doc.spese_imballo"/> -->
+                               
                             </td>
                               <td name="td_spese_varie" class="text-left">
                                 <span> 50 </span>
-                                <!-- <span t-field="doc.spese_varie"/> -->
+                                
                             </td>
                         </tr>
                     </tbody>
                 </table>
                 
-                <!-- Terza parte -->
+          
                  <table class="table table-sm o_main_table">
                     <thead style="display: table-row-group">
                         <tr>
@@ -211,11 +212,10 @@
                         <tr t-att-class="'bg-200 o_line_section'">
                             <td name="td_annotazioni" class="text-left"> 
                                 <span> TEST Annotazioni </span>
-                                <!-- <span t-field="doc.annotazioni"/> -->   
+                             
                             </td>
                             <td name="td_timbro_e_firma" class="text-left">
-                                
-                                <!-- <span t-field="doc.sconto_merce"/> -->
+                            
                             </td>
                         </tr>
                     </tbody>
@@ -228,7 +228,7 @@
         
         
         
-        
+        -->
     </data>   
 </odoo>
 
