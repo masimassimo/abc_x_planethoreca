@@ -3,7 +3,7 @@
     'name': "abc_x_planethoreca",
 
     'summary': """
-        Modifiche per PlanetHoreca (Preventivo/Ordine di vendita, Campo Checkbok in Pos_Configuration)""",
+        Modifiche per PlanetHoreca (Preventivo/Ordine di vendita, Campo Checkbok in Pos_Configuration) .""",
 
     'description': """
         Modifiche per PlanetHoreca (Preventivo/Ordine di vendita, Campo Checkbok in Pos_Configuration)
