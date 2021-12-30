@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+        <!-- Faccio in modo che nella vista res.partner compaia il campo codice_arca -->
+        <record model="ir.ui.view" id="res_partner_inherit_1">
+              <field name="name">res_partner_inherit_1</field>
+              <field name="model">res.partner</field>
+              <field name="inherit_id" ref="base.view_partner_form"/>
+              <field name="arch" type="xml">
+                  <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="codice_arca"/>
+                </xpath>
+              </field>
+        </record> 
+      
+    </data>
+</odoo>

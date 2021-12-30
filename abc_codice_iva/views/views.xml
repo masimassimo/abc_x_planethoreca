@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+        <!-- Faccio in modo che nella vista account.view_tax_form compaia il campo codice_arca -->
+        <record model="ir.ui.view" id="account_tax_inherit">
+              <field name="name">account_tax_inherit</field>
+              <field name="model">account.tax</field>
+              <field name="inherit_id" ref="account.view_tax_form"/>
+              <field name="arch" type="xml">
+                  <xpath expr="//field[@name='active']" position="after">
+                    <field name="codice_iva"/>
+                </xpath>
+              </field>
+        </record> 
+  </data>
+</odoo>
