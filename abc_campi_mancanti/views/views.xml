@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+         <!-- Faccio in modo che nella vista point_of_sale.view_pos_session_form compaia il campo Data Fatturapertutti -->
+        <record model="ir.ui.view" id="pos_order_inherit_100000">
+              <field name="name">pos_order_inherit_100000</field>
+              <field name="model">pos.order</field>
+              <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+              <field name="arch" type="xml">
+                  <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="data_fattura_per_tutti"/>
+                    <field name="progressivo_fattura_per_tutti"/>
+                </xpath>
+              </field>
+        </record> 
+  </data>
+</odoo>
