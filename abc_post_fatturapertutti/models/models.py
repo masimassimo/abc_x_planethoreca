@@ -96,7 +96,11 @@ class PosSession(models.Model):
         #resLoad = json.loads(res.json())
         _logger.info(type(res.json()))
         resJson = res.json()
-        return str(resJson)
+        if(resJson['errorCode'] != 0):
+            stringaErrore = "Qualcosa è andato storto! Contatta gli sviluppatori."
+            return stringaErrore
+        else:
+            return str(resJson)
 
 
 
