@@ -1,5 +1,6 @@
 <odoo>
     <data>
+        <!--
         <template id="report_ddt_inherit_abc_1" inherit_id="l10n_it_delivery_note.delivery_note_report_template">
              <xpath expr="//div[@class='page']" position="before">
                 <br/>
@@ -129,5 +130,6 @@
              </xpath>
                      
         </template>
+        -->
     </data>   
 </odoo>
