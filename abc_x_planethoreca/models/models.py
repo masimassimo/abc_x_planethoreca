@@ -10,7 +10,7 @@ class PosConfig(models.Model):
     _name = "pos.config"
     _inherit = "pos.config"
     
-    fattura_per_tutti = fields.Boolean(string="Fatturapertutti", default = False)
+    fattura_per_tutti = fields.Boolean(string="Fatturapertutti", default = False, store=True)
 
 class ResPartner(models.Model):
     _name = "res.partner"
@@ -22,11 +22,11 @@ class ProductTemplate(models.Model):
     _name = "product.template"
     _inherit = "product.template"
     
-    width = fields.Float(string="Width", default = 0.0)
+    width = fields.Float(string="Width", default = 0.0, store=True)
     width_uom = fields.Char(string="", readonly=True, default="m")
     
-    height = fields.Float(string="Height", default = 0.0)
+    height = fields.Float(string="Height", default = 0.0, store=True)
     height_uom = fields.Char(string="", readonly=True, default="m")
     
-    depth = fields.Float(string="Depth", default = 0.0)
+    depth = fields.Float(string="Depth", default = 0.0, store=True)
     depth_uom = fields.Char(string="", readonly=True, default="m")
