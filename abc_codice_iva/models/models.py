@@ -11,4 +11,4 @@ class accountTax(models.Model):
     _name = "account.tax"
     _inherit = "account.tax"
     
-    codice_iva = fields.Char(string = "Codice Iva", stored = True)
+    codice_iva = fields.Char(string = "Codice Iva", store = True)
