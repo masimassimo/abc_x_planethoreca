@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "abc_codiceIva",
+    'name': "ABC - abc_codiceIva",
 
     'summary': """
         Modulo che permette di aggiungere il campo Codice Iva nelle Imposte di Contabilità.""",

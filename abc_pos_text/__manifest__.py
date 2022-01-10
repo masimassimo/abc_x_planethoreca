@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "abc_pos_text",
+    'name': "ABC - abc_pos_text",
 
     'summary': """
         Modulo che permette di stampare lo scontrino in TXT dopo averlo validato alla cassa.""",

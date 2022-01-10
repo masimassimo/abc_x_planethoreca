@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "abc_post_fatturapertutti",
+    'name': "ABC - abc_post_fatturapertutti",
 
     'summary': """
         Modulo che permette di mandare una richiesta POST a Fatturapertutti dopo aver fatto uno scontrino tramite modulo PoS.""",

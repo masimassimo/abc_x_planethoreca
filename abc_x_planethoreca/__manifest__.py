@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "abc_x_planethoreca",
+    'name': "ABC - abc_x_planethoreca",
 
     'summary': """
         Modifiche per PlanetHoreca (Preventivo/Ordine di vendita, Campo Checkbok in Pos_Configuration) .""",

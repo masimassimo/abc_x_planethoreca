@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "abc_campi_mancanti",
+    'name': "ABC - abc_campi_mancanti",
 
     'summary': """
         Modulo che aggiunge i campi X e Y""",

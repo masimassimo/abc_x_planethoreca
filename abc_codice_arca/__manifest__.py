@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "abc_codiceArca",
+    'name': "ABC - abc_codiceArca",
 
     'summary': """
         Modulo che permette crea il campo Codice Arca nell'anagrafica Contatto.""",
