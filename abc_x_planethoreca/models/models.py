@@ -11,6 +11,7 @@ class PosConfig(models.Model):
     _inherit = "pos.config"
     
     fattura_per_tutti = fields.Boolean(string="Fatturapertutti", default = False, store=True)
+    #Commentino
 
 class ResPartner(models.Model):
     _name = "res.partner"
