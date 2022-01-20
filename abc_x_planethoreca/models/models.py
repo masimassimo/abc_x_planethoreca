@@ -23,8 +23,8 @@ class ProductTemplate(models.Model):
     _name = "product.template"
     _inherit = "product.template"
     
-    weight_lordo = fields.Float(string="Peso Netto", default = 0.0, store=True)
-    weight_lordo_uom = fields.Char(string="", readonly=True, default="kg")
+    weight_netto = fields.Float(string="Peso Netto", default = 0.0, store=True)
+    weight_netto_uom = fields.Char(string="", readonly=True, default="kg")
      
     width = fields.Float(string="Larghezza", default = 0.0, store=True)
     width_uom = fields.Char(string="", readonly=True, default="m")
