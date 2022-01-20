@@ -17,10 +17,10 @@ class ProductTemplate(models.Model):
     _name = "product.template"
     _inherit = "product.template"
     
-    codice_arca = fields.Char(string="Codice Arca", store=True)
+    codice_arca1 = fields.Char(string="Codice Arca", store=True)
 
 class ProductProduct(models.Model):
     _name = "product.product"
     _inherit = "product.product"
     
-    codice_arca = fields.Char(string="Codice Arca", store=True)
+    codice_arca2 = fields.Char(string="Codice Arca", store=True)
