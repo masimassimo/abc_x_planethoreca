@@ -27,12 +27,12 @@ class ProductTemplate(models.Model):
     weight_netto_uom = fields.Char(string="", readonly=True, default="kg")
      
     width = fields.Float(string="Larghezza", default = 0.0, store=True)
-    width_uom = fields.Char(string="", readonly=True, default="m")
+    width_uom = fields.Char(string="", readonly=True, default="cm")
     
     height = fields.Float(string="Altezza", default = 0.0, store=True)
-    height_uom = fields.Char(string="", readonly=True, default="m")
+    height_uom = fields.Char(string="", readonly=True, default="cm")
     
     depth = fields.Float(string="Lunghezza", default = 0.0, store=True)
-    depth_uom = fields.Char(string="", readonly=True, default="m")
+    depth_uom = fields.Char(string="", readonly=True, default="cm")
      
     weight = fields.Float(string="Peso Lordo", default = 0.0, store=True, readonly=False, store_true=True)
