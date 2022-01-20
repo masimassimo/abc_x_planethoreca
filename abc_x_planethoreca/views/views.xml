@@ -64,6 +64,11 @@
       <field name="arch" type="xml">
         
           <xpath expr="//div[@class='o_row'][2]" position="after">
+          <label for="weight_netto" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
+                <div class="o_row" name="weight_netto" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
+                  <field name="weight_netto"/>
+                  <span><field name="weight_netto_uom"/></span>
+            </div>
           <label for="width" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
                 <div class="o_row" name="width" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
                   <field name="width"/>
@@ -83,21 +88,6 @@
       </field>
     </record>
    
-    <record model="ir.ui.view" id="product_template_inherit_1_11">
-      <field name="name">product_template_inherit_1_11</field>
-      <field name="model">product.template</field>
-      <field name="inherit_id" ref="product.product_template_form_view"/>
-    
-      <field name="arch" type="xml">
-          <xpath expr="//div[@class='o_row'][2]" position="after">
-          <label for="weight_netto" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
-                <div class="o_row" name="weight_netto" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
-                  <field name="weight_netto"/>
-                  <span><field name="weight_netto_uom"/></span>
-            </div>
-        </xpath>
-      </field>
-    </record>
       
   </data>
 </odoo>
