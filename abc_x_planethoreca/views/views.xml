@@ -55,7 +55,7 @@
       </record>
       
       
-      
+        
     <record model="ir.ui.view" id="product_template_inherit_width">
       <field name="name">product_template_width</field>
       <field name="model">product.template</field>
@@ -67,84 +67,37 @@
           <label for="width" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
                 <div class="o_row" name="width" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
                   <field name="width"/>
-                
+                  <span><field name="width_uom"/></span>
             </div>
-          
-        </xpath>
-      </field>
-    </record>
-    <record model="ir.ui.view" id="product_template_inherit_width_uom">
-      <field name="name">product_template_width_uom</field>
-      <field name="model">product.template</field>
-      <field name="inherit_id" ref="product.product_template_form_view"/>
-      <field name="arch" type="xml">
-        
-          <xpath expr="//field[@name='width']" position="after">
-          <span><field name="width_uom"/></span>
-          
-        </xpath>
-      </field>
-    </record>
-    
-    <record model="ir.ui.view" id="product_template_inherit_height">
-      <field name="name">product_template_height</field>
-      <field name="model">product.template</field>
-      <field name="inherit_id" ref="product.product_template_form_view"/>
-      <field name="arch" type="xml">
-        
-          
-          <xpath expr="//div[@class='o_row'][3]" position="after">
-            <label for="height" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
+          <label for="height" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
                 <div class="o_row" name="height" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
                   <field name="height"/>
+                  <span><field name="height_uom"/></span>
               </div>
-        </xpath>
-      </field>
-    </record>
-    <record model="ir.ui.view" id="product_template_inherit_height_uom">
-      <field name="name">product_template_height_uom</field>
-      <field name="model">product.template</field>
-      <field name="inherit_id" ref="product.product_template_form_view"/>
-      <field name="arch" type="xml">
-        
-          
-          <xpath expr="//field[@name='height']" position="after">
-              <span><field name="height_uom"/></span>
-          
-        </xpath>
-      </field>
-    </record>
-      
-      
-    <record model="ir.ui.view" id="product_template_inherit_depth">
-      <field name="name">product_template_depth</field>
-      <field name="model">product.template</field>
-      <field name="inherit_id" ref="product.product_template_form_view"/>
-      <field name="arch" type="xml">
-        
-          
-          <xpath expr="//div[@class='o_row'][4]" position="after">
-          <label for="depth" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
+           <label for="depth" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
                 <div class="o_row" name="depth" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
                   <field name="depth"/>
-              </div>
+                  <span><field name="depth_uom"/></span>
+            </div>
         </xpath>
       </field>
     </record>
-    <record model="ir.ui.view" id="product_template_inherit_depth_uom">
-      <field name="name">product_template_depth_uom</field>
+   
+    <record model="ir.ui.view" id="product_template_inherit_11">
+      <field name="name">product_template_11</field>
       <field name="model">product.template</field>
       <field name="inherit_id" ref="product.product_template_form_view"/>
+    
       <field name="arch" type="xml">
-        
-          
-          <xpath expr="//field[@name='depth']" position="after">
-              <span><field name="depth_uom"/></span>
-          
+          <xpath expr="//field[@name='responsible_id']" position="after">
+          <label for="weight_lordo" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
+                <div class="o_row" name="weight_lordo" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
+                  <field name="weight_lordo"/>
+                  <span><field name="weight_lordo_uom"/></span>
+            </div>
         </xpath>
       </field>
     </record>
-      	
       
   </data>
 </odoo>
