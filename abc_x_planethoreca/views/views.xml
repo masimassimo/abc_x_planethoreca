@@ -89,7 +89,7 @@
       <field name="inherit_id" ref="product.product_template_form_view"/>
     
       <field name="arch" type="xml">
-          <xpath expr="//div[@class='o_row'][1]" position="after">
+          <xpath expr="//div[@class='o_row'][2]" position="after">
           <label for="weight_netto" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
                 <div class="o_row" name="weight_netto" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
                   <field name="weight_netto"/>
