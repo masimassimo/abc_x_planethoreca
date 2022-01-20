@@ -23,11 +23,14 @@ class ProductTemplate(models.Model):
     _name = "product.template"
     _inherit = "product.template"
     
-    width = fields.Float(string="Width", default = 0.0, store=True)
+    weight_lordo = fields.Float(string="Peso Netto", default = 0.0, store=True)
+    weight_lordo_uom = fields.Char(string="", readonly=True, default="kg")
+     
+    width = fields.Float(string="Larghezza", default = 0.0, store=True)
     width_uom = fields.Char(string="", readonly=True, default="m")
     
-    height = fields.Float(string="Height", default = 0.0, store=True)
+    height = fields.Float(string="Altezza", default = 0.0, store=True)
     height_uom = fields.Char(string="", readonly=True, default="m")
     
-    depth = fields.Float(string="Depth", default = 0.0, store=True)
+    depth = fields.Float(string="Lunghezza", default = 0.0, store=True)
     depth_uom = fields.Char(string="", readonly=True, default="m")
