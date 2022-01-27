@@ -36,4 +36,4 @@ class ProductTemplate(models.Model):
     depth_uom = fields.Char(string="", readonly=True, default="cm")
      
     volume_uom_name= fields.Char(string="", readonly=True, default="cm³")
-    weight = fields.Float(string="Peso Lordo", default = 0.0, store=True, readonly=False, store=True)
+    weight = fields.Float(string="Peso Lordo", default = 0.0, store=True, readonly=False)
